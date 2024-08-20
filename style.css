@@ -1,0 +1,66 @@
+*{
+    position: relative;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(96, 55, 87, 0.869);
+    color:aliceblue;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+    margin:20% auto 10px;
+}
+
+input{
+    border: 0px;
+    padding: 3px;
+    height: 30px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    color: rgba(4, 4, 4, 0.654);
+}
+#addBtn{
+    border: 1px solid rgb(172, 91, 171);
+    padding:10px;
+    border-radius:40% ;
+    -webkit-border-radius:40% ;
+    -moz-border-radius:40% ;
+    -ms-border-radius:40% ;
+    -o-border-radius:40% ;
+}
+
+ul{
+    list-style-type:decimal;
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+li .delete-btn{
+    background-color: rgb(62, 20, 50);
+    margin-left: 10px;
+    color: aliceblue;
+    border: 0px;
+    border-radius: 5px;
+}
+
+li .check-btn{
+    background-color: rgb(222, 157, 226);
+    margin-left: 10px;
+    color: rgb(51, 53, 54);
+    border: 0px;
+    border-radius: 5px;
+}
+
+.checked{
+    text-decoration: line-through black;
+}

@@ -6,10 +6,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(96, 55, 87, 0.869);
+    background-color: rgba(96, 55, 87, 0.733);
     color:aliceblue;
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+   
 }
 
 form{
@@ -25,16 +26,20 @@ input{
     -moz-border-radius:10px ;
     -ms-border-radius:10px ;
     -o-border-radius:10px ;
+    box-shadow: 1px 1px 10px rgba(67, 28, 64, 0.868);
     color: rgba(4, 4, 4, 0.654);
 }
+
 #addBtn{
-    border: 1px solid rgb(172, 91, 171);
-    padding:10px;
-    border-radius:40% ;
-    -webkit-border-radius:40% ;
-    -moz-border-radius:40% ;
-    -ms-border-radius:40% ;
-    -o-border-radius:40% ;
+    border: 1px solid rgb(147, 83, 146);
+    box-shadow: 1px 1px 10px rgba(67, 28, 64, 0.868);
+    height: 35px;
+    aspect-ratio: 1/1;
+    border-radius:45% ;
+    -webkit-border-radius:45% ;
+    -moz-border-radius:45% ;
+    -ms-border-radius:45% ;
+    -o-border-radius:45% ;
 }
 
 ul{
@@ -63,4 +68,36 @@ li .check-btn{
 
 .checked{
     text-decoration: line-through black;
+}
+
+p{
+    position: relative;  
+    overflow: hidden;
+}
+
+p::before {  
+    color: rgb(62, 20, 50);
+    font-weight: bold;
+    content: "D|";  
+    animation-name: text;  
+    animation-duration: 3s;  
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;  
+    white-space: nowrap; 
+}  
+
+@keyframes text {
+    0%{ content: "D|";}
+    5% { content: "Do |";}
+    10% { content: "Do M|"; }
+    20% { content: "Do Mo|"; }
+    30% { content: "Do Mor|"; }
+    40% { content: "Do More|"; }
+    50% { content: "Do More |"; }
+    60% { content: "Do More Gre|"; }
+    70% { content: "Do More Great|"; }
+    80% { content: "Do More Great W|"; }
+    85% { content: "Do More Great Wo|"; }
+    90% { content: "Do More Great Wor|"; }
+    100% { content: "Do More Great Work! |"; }
 }

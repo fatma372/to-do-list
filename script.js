@@ -16,7 +16,7 @@ form.addEventListener('submit', function(event) {
 
     //check button:
     let checkBtn=document.createElement("button");
-    checkBtn.textContent="check";
+    checkBtn.textContent="Check";
     checkBtn.classList.add("check-btn");
   
 
@@ -36,3 +36,4 @@ form.addEventListener('submit', function(event) {
     });
   
 });
+

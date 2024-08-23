@@ -1,5 +1,8 @@
 *{
     position: relative;
+    font-family:"Caveat", cursive;
+    font-size: x-large;
+    border: none;
 }
 body{
     display: flex;
@@ -14,13 +17,12 @@ body{
 }
 
 form{
-    margin:20% auto 10px;
+    margin:10% auto 10px;
 }
 
 input{
     border: 0px;
-    padding: 3px;
-    height: 30px;
+    padding: 5px;
     border-radius:10px ;
     -webkit-border-radius:10px ;
     -moz-border-radius:10px ;
@@ -31,10 +33,11 @@ input{
 }
 
 #addBtn{
-    border: 1px solid rgb(147, 83, 146);
+    
     box-shadow: 1px 1px 10px rgba(67, 28, 64, 0.868);
-    height: 35px;
-    aspect-ratio: 1/1;
+    
+    height: 40px;
+    width: 40px;
     border-radius:45% ;
     -webkit-border-radius:45% ;
     -moz-border-radius:45% ;
@@ -66,19 +69,26 @@ li .check-btn{
     border-radius: 5px;
 }
 
+i{
+    display: inline-block;
+    padding-top: -3px;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(62, 20, 50);
+}
+
 .checked{
     text-decoration: line-through black;
 }
 
-p{
-    position: relative;  
+p{ 
     overflow: hidden;
 }
 
 p::before {  
     color: rgb(62, 20, 50);
     font-weight: bold;
-    content: "D|";  
+    content: "|";  
     animation-name: text;  
     animation-duration: 3s;  
     animation-timing-function: ease-in-out;
@@ -87,7 +97,7 @@ p::before {
 }  
 
 @keyframes text {
-    0%{ content: "D|";}
+    0% { content: "D|";}
     5% { content: "Do |";}
     10% { content: "Do M|"; }
     20% { content: "Do Mo|"; }

@@ -3,14 +3,16 @@
     font-family:"Caveat", cursive;
     font-size: x-large;
     border: none;
+    margin: 0px;
+    padding: 0px;
 }
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(96, 55, 87, 0.733);
-    color:aliceblue;
+    background-color: rgba(200, 161, 224, 0.181);
+    color:rgba(96, 55, 87, 0.949);
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif
    
@@ -28,7 +30,7 @@ input{
     -moz-border-radius:10px ;
     -ms-border-radius:10px ;
     -o-border-radius:10px ;
-    box-shadow: 1px 1px 10px rgba(67, 28, 64, 0.868);
+    box-shadow: 1px 1px 15px rgba(67, 28, 64, 0.868);
     color: rgba(4, 4, 4, 0.654);
 }
 
@@ -47,26 +49,33 @@ input{
 
 ul{
     list-style-type:decimal;
-    margin: 10px 30px;
+    margin: 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap:10px;
+}
+li{
+    width: 100%;
+    text-align: center;
 }
 
 li .delete-btn{
+    display: inline-block;
     background-color: rgb(62, 20, 50);
-    margin-left: 10px;
+    margin-left: 35px;
     color: aliceblue;
-    border: 0px;
     border-radius: 5px;
+    padding: 1px 10px;
 }
 
 li .check-btn{
-    background-color: rgb(222, 157, 226);
+    background-color: rgba(200, 161, 224, 0.663);
     margin-left: 10px;
     color: rgb(51, 53, 54);
-    border: 0px;
     border-radius: 5px;
+    padding: 1px 10px;
 }
 
 i{
@@ -83,6 +92,7 @@ i{
 
 p{ 
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 p::before {  
@@ -90,7 +100,7 @@ p::before {
     font-weight: bold;
     content: "|";  
     animation-name: text;  
-    animation-duration: 3s;  
+    animation-duration: 4s;  
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;  
     white-space: nowrap; 
@@ -103,11 +113,11 @@ p::before {
     20% { content: "Do Mo|"; }
     30% { content: "Do Mor|"; }
     40% { content: "Do More|"; }
-    50% { content: "Do More |"; }
+    50% { content: "Do More G|"; }
     60% { content: "Do More Gre|"; }
     70% { content: "Do More Great|"; }
     80% { content: "Do More Great W|"; }
     85% { content: "Do More Great Wo|"; }
-    90% { content: "Do More Great Wor|"; }
-    100% { content: "Do More Great Work! |"; }
+    90% { content: "Do More Great Work|"; }
+    100% { content: "Do More Great Work...|"; }
 }

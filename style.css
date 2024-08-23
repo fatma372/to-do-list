@@ -55,10 +55,6 @@ ul{
     align-items: start;
     gap:10px;
 }
-li{
-    width: 100%;
-    text-align: justify;
-}
 
 li .delete-btn{
     display: inline-block;

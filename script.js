@@ -8,28 +8,31 @@ function saveTasks() {
     const tasks = [];  
     const items = list.getElementsByTagName('li');  
     for (let item of items) {  
-        //console.log(item.textContent.replace('DeleteCheck', '').trim())
-        tasks.push(item.textContent.replace('DeleteCheck', '').trim()); 
+        const isChecked = item.classList.contains("checked"); // Check if the item is checked  
+        tasks.push({ text: item.textContent.replace('DeleteCheck', '').trim(), checked: isChecked });   
     }  
     localStorage.setItem('tasks', JSON.stringify(tasks));  
 }  
 
-//load tasks from local storage to page
+// Load tasks from local storage to page  
 function loadTasks() {  
     const tasks = JSON.parse(localStorage.getItem('tasks'));  
     if (tasks) {  
-        tasks.forEach(function(taskText) {  
-            addTaskToList(taskText);  
+        tasks.forEach(function(taskObject) {  
+            addTaskToList(taskObject.text, taskObject.checked);  
         });  
     }  
 }  
 
-//create a new task and add it to the list  
-function addTaskToList(taskValue) {  
+// Create a new task and add it to the list  
+function addTaskToList(taskValue, isChecked = false) {  
     let li = document.createElement('li');  
     li.textContent = taskValue;  
+    if (isChecked) {  
+        li.classList.add("checked"); // Add checked class if the task is marked as checked  
+    }  
 
-    // delete button  
+    // Delete button  
     let deleteBtn = document.createElement("button");  
     deleteBtn.textContent = "Delete";  
     deleteBtn.classList.add("delete-btn");  
@@ -50,10 +53,11 @@ function addTaskToList(taskValue) {
 
     checkBtn.addEventListener('click', function() {  
         li.classList.toggle("checked");  
+        saveTasks(); // Update local storage when toggling check status  
     });  
 }  
 
-// get tasks from local storage to page
+// Get tasks from local storage to page  
 loadTasks();  
 
 form.addEventListener('submit', function(event) {  
@@ -67,7 +71,7 @@ form.addEventListener('submit', function(event) {
 });
 
 
-//=======before adding tasks to local host============
+//=======before adding tasks to local storage============
 // //to do list:
 // let form=document.getElementById("form");
 // let list=document.getElementById("list");

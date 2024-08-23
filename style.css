@@ -22,7 +22,7 @@ form{
     margin:10% auto 10px;
 }
 
-input{
+input, button{
     border: 0px;
     padding: 5px;
     border-radius:10px ;
@@ -35,9 +35,8 @@ input{
 }
 
 #addBtn{
-    
+    background-color: (247, 239, 229);
     box-shadow: 1px 1px 10px rgba(67, 28, 64, 0.868);
-    
     height: 40px;
     width: 40px;
     border-radius:45% ;
@@ -119,4 +118,11 @@ p::before {
     85% { content: "Do More Great Wo|"; }
     90% { content: "Do More Great Work|"; }
     100% { content: "Do More Great Work...|"; }
+}
+
+@media (max-width: 508px) {
+    body{
+        font-size: normal;
+        
+    }
 }

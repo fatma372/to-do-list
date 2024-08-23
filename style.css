@@ -22,7 +22,7 @@ form{
     margin:10% auto 10px;
 }
 
-input, button{
+input{
     border: 0px;
     padding: 5px;
     border-radius:10px ;
